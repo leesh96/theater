@@ -2,15 +2,18 @@
     <!-- Base application theme. -->
     <style name="Theme.Theater" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/royal_blue</item>
+        <item name="colorPrimaryVariant">@color/lavender_blue</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/shamrock</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/background</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">?attr/background</item>
+        <!-- Background color. -->
+        <item name="background">@color/white_smoke</item>
+        <item name="android:windowBackground">@color/white_smoke</item>
         <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/app_font</item>
+        <item name="colorAccent">@color/lavender_blue</item>
     </style>
 </resources>
