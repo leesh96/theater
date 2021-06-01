@@ -1,120 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageButton
-        android:id="@+id/btn_movie_info"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/btn_movie_info"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_theater_info"
-        app:layout_constraintBottom_toTopOf="@id/btn_reservation"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_movie_info"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="영화 정보"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@id/btn_movie_info"
-        app:layout_constraintEnd_toEndOf="@id/btn_movie_info"
-        app:layout_constraintTop_toBottomOf="@id/btn_movie_info"
-        app:layout_constraintBottom_toTopOf="btn"/>
+        <ImageButton
+            android:id="@+id/btn_movie_info"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/btn_movie_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_theater_info"
+            app:layout_constraintBottom_toTopOf="@id/btn_reservation"/>
 
-    <ImageButton
-        android:id="@+id/btn_theater_info"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/btn_theater_info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_movie_info"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn_check_reservation"/>
+        <TextView
+            android:id="@+id/tv_movie_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="영화 정보"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/btn_movie_info"
+            app:layout_constraintEnd_toEndOf="@id/btn_movie_info"
+            app:layout_constraintTop_toBottomOf="@id/btn_movie_info"
+            />
 
-    <TextView
-        android:id="@+id/tv_theater_info"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="극장 정보"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@id/btn_theater_info"
-        app:layout_constraintEnd_toEndOf="@id/btn_theater_info"
-        app:layout_constraintTop_toBottomOf="@id/btn_theater_info" />
+        <ImageButton
+            android:id="@+id/btn_theater_info"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/btn_theater_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_movie_info"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_check_reservation"/>
 
-    <ImageButton
-        android:id="@+id/btn_reservation"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/btn_reservation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_check_reservation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_movie_info" />
+        <TextView
+            android:id="@+id/tv_theater_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="극장 정보"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/btn_theater_info"
+            app:layout_constraintEnd_toEndOf="@id/btn_theater_info"
+            app:layout_constraintTop_toBottomOf="@id/btn_theater_info" />
 
-    <TextView
-        android:id="@+id/tv_reservation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="예매 하기"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@id/btn_reservation"
-        app:layout_constraintStart_toStartOf="@id/btn_reservation"
-        app:layout_constraintTop_toBottomOf="@+id/btn_reservation" />
+        <ImageButton
+            android:id="@+id/btn_reservation"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/btn_reservation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_check_reservation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_movie_info" />
 
-    <ImageButton
-        android:id="@+id/btn_check_reservation"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/btn_check_reservation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_reservation"
-        app:layout_constraintTop_toBottomOf="@id/btn_theater_info" />
+        <TextView
+            android:id="@+id/tv_reservation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="예매 하기"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/btn_reservation"
+            app:layout_constraintStart_toStartOf="@id/btn_reservation"
+            app:layout_constraintTop_toBottomOf="@+id/btn_reservation" />
 
-    <TextView
-        android:id="@+id/tv_check_reservation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="예매 내역"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@id/btn_check_reservation"
-        app:layout_constraintStart_toStartOf="@id/btn_check_reservation"
-        app:layout_constraintTop_toBottomOf="@id/btn_check_reservation" />
+        <ImageButton
+            android:id="@+id/btn_check_reservation"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/btn_check_reservation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_reservation"
+            app:layout_constraintTop_toBottomOf="@id/btn_theater_info" />
 
-    <Button
-        android:id="@+id/btn_userinfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="정보 수정"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintEnd_toStartOf="@id/btn_withdraw"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        <TextView
+            android:id="@+id/tv_check_reservation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="예매 내역"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/btn_check_reservation"
+            app:layout_constraintStart_toStartOf="@id/btn_check_reservation"
+            app:layout_constraintTop_toBottomOf="@id/btn_check_reservation" />
 
-    <Button
-        android:id="@+id/btn_withdraw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="회원 탈퇴"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toStartOf="@id/btn_logout"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        <Button
+            android:id="@+id/btn_userinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="정보 수정"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_withdraw"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="로그아웃"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        <Button
+            android:id="@+id/btn_withdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원 탈퇴"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_logout"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
