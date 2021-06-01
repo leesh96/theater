@@ -1,5 +1,6 @@
 package com.dbp.theater
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -9,6 +10,7 @@ import com.dbp.theater.databinding.ActivityTheaterInfoBinding
 import okhttp3.*
 import org.json.JSONObject
 import java.io.IOException
+import java.io.Serializable
 
 class TheaterInfoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTheaterInfoBinding
@@ -24,7 +26,7 @@ class TheaterInfoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.rcviewTheater.apply {
-            mTheaterAdapter = TheaterAdapter()
+            mTheaterAdapter = TheaterAdapter { item -> clickItem(item) }
             layoutManager = LinearLayoutManager(this@TheaterInfoActivity)
             setHasFixedSize(true)
             adapter = mTheaterAdapter
@@ -33,7 +35,15 @@ class TheaterInfoActivity : AppCompatActivity() {
             mTheaterAdapter.notifyDataSetChanged()
         }
 
+        binding.btnBack.setOnClickListener { finish() }
+
         getTheaterJson()
+    }
+
+    private fun clickItem(theaterData: TheaterData) {
+        val intent = Intent(this, TheaterDetailActivity::class.java)
+        intent.putExtra("theaterData", theaterData as Serializable)
+        startActivity(intent)
     }
 
     private fun getTheaterJson() {
@@ -56,8 +66,7 @@ class TheaterInfoActivity : AppCompatActivity() {
                 Log.d(TAG, responseBody.toString())
                 val theaterBody = JSONObject(responseBody!!)
                 val theaterJsonArray = theaterBody.optJSONArray("theater")
-                Log.d("array length", theaterJsonArray.length().toString())
-                for(i in 0 until theaterJsonArray.length()) {
+                for (i in 0 until theaterJsonArray!!.length()) {
                     val jsonObject = theaterJsonArray.getJSONObject(i)
                     val newTheater = TheaterData(
                         URL + jsonObject.getString("logo"),

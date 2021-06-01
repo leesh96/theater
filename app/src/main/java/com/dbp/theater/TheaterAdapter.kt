@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dbp.theater.databinding.ItemTheaterBinding
 
-class TheaterAdapter : RecyclerView.Adapter<TheaterAdapter.ViewHolder>() {
+class TheaterAdapter(val click: (TheaterData) -> Unit) : RecyclerView.Adapter<TheaterAdapter.ViewHolder>() {
     var datas = mutableListOf<TheaterData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,6 +30,9 @@ class TheaterAdapter : RecyclerView.Adapter<TheaterAdapter.ViewHolder>() {
             binding.tvName.text = item.name
             binding.tvAddress.text = item.address
             binding.tvContact.text = item.contact
+            binding.root.setOnClickListener {
+                click(item)
+            }
         }
     }
 }

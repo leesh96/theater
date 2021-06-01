@@ -48,12 +48,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnMovieInfo.setOnClickListener {
             startActivity(Intent(this, MovieInfoActivity::class.java))
-            finish()
         }
 
         binding.btnTheaterInfo.setOnClickListener {
             startActivity(Intent(this, TheaterInfoActivity::class.java))
-            finish()
         }
 
         binding.btnReservation.setOnClickListener {
