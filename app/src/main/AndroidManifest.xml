@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".UserInfoActivity" />
+        <activity android:name=".TheaterInfoActivity" />
+        <activity android:name=".MovieInfoActivity"/>
     </application>
 
 </manifest>

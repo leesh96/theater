@@ -45,6 +45,16 @@ class MainActivity : AppCompatActivity() {
         binding.btnUserinfo.setOnClickListener {
             startActivity(Intent(this, UserInfoActivity::class.java))
         }
+
+        binding.btnMovieInfo.setOnClickListener {
+            startActivity(Intent(this, MovieInfoActivity::class.java))
+            finish()
+        }
+
+        binding.btnTheaterInfo.setOnClickListener {
+            startActivity(Intent(this, TheaterInfoActivity::class.java))
+            finish()
+        }
     }
 
     private fun withdraw() {
