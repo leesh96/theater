@@ -28,6 +28,8 @@
         <activity android:name=".ReservationActivity" />
         <activity android:name=".TheaterDetailActivity" />
         <activity android:name=".MovieDetailActivity" />
+        <activity android:name=".CheckReservationActivity" />
+        <activity android:name=".ReservationDetailActivity" />
     </application>
 
 </manifest>

@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnReservation.setOnClickListener {
             startActivity(Intent(this, ReservationActivity::class.java))
         }
+
+        binding.btnCheckReservation.setOnClickListener {
+            startActivity(Intent(this, CheckReservationActivity::class.java))
+        }
     }
 
     private fun withdraw() {
