@@ -55,6 +55,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, TheaterInfoActivity::class.java))
             finish()
         }
+
+        binding.btnReservation.setOnClickListener {
+            startActivity(Intent(this, ReservationActivity::class.java))
+        }
     }
 
     private fun withdraw() {
