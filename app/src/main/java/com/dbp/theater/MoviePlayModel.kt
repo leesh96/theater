@@ -6,7 +6,7 @@ data class MoviePlayModel(
     val endTime: String,
     val movieTitle: String,
     val screenName: String,
-    val chairRow: String,
-    val chairCol: String,
+    val chairRow: Char,
+    val chairCol: Int,
     val theaterName: String
 )

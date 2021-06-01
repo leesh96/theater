@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.dbp.theater.databinding.ItemMoviePlayBinding
 
-class ReservationAdapter :
+class ReservationAdapter(val onClick: (MoviePlayModel) -> Unit) :
     RecyclerView.Adapter<ReservationAdapter.ViewHolder>() {
     var datas = mutableListOf<MoviePlayModel>()
 
@@ -30,6 +30,9 @@ class ReservationAdapter :
             binding.tvScreenName.text = item.screenName
             binding.tvStartTime.text = item.startTime
             binding.tvEndTime.text = item.endTime
+            binding.root.setOnClickListener {
+                onClick(item)
+            }
         }
     }
 }
