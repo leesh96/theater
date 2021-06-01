@@ -88,6 +88,26 @@
         app:layout_constraintTop_toBottomOf="@id/btn_check_reservation" />
 
     <Button
+        android:id="@+id/btn_userinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="정보 수정"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_withdraw"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/btn_withdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원 탈퇴"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_logout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
